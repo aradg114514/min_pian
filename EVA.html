@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parallax{
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px;
+            overflow: hidden;
+        }
+        .parallax.img1{
+            background-image: url('https://i.pixiv.nl/img-master/img/2021/04/16/00/00/02/89174443_p0_master1200.jpg');
+        }
+        .parallax.img2{
+            background-image: url('https://i.pixiv.nl/img-master/img/2014/12/05/09/19/57/47402905_p0_master1200.jpg');
+        }
+        .parallax.img3{
+            background-image: url("https://i.pixiv.nl/img-master/img/2025/06/02/21/37/32/131107378_p0_master1200.jpg");
+        }
+        .parallax.img4{
+            background-image: url("https://i.pixiv.nl/img-master/img/2016/12/04/14/53/24/60224597_p0_master1200.jpg");
+        }
+        .content{
+            padding: 50px;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        
+    </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>滚动查看视差效果</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="content">
+        <h2>凌波丽</h2>
+        <p>零号机驾驶员</p>
+        
+    </div>
+    <div class="parallax img1"></div>
+    <div class="content">
+        <h2>明日香</h2>
+        <p>二号机驾驶员</p>
+    </div>
+    <div class="parallax img2"></div>
+    <div class="content">
+        <h2>碇真嗣</h2>
+        <p>初号机驾驶员</p>
+    </div>
+    <div class="parallax img3"></div>
+    <div class="content">
+        <h2>明日香</h2>
+        <p>少有的自由</p>
+
+    </div>
+    <div class="parallax img4"></div>
+    <div class="content">
+        <h2>完</h2>
+        </div>
+</body>
+</html>
