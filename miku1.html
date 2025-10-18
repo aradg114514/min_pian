@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>imgzoom</title>
+    <style>
+        /* 新增：用于包裹两个图片容器的父容器 */
+        .images-wrapper {
+            display: flex;
+            justify-content: center; /* 水平居中对齐 */
+            gap: 20px; /* 两张图片之间的间距 */
+            margin-top: 100px; /* 整体顶部间距 */
+        }
+
+        .image-container{
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: black 1px 1px;
+            position: relative;
+        }
+        .zoom-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition:  0.5s ease;
+        }
+        .image-container:hover .zoom-image {
+            transform: scale(2);
+        }
+        .image-container2{
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: black 1px 1px;
+            position: relative;
+        }
+        .zoom-image2{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition:  0.5s ease;
+        }
+        .image-container2:hover .zoom-image2{
+             transform: scale(2);
+        }
+        .images-wrapper2{
+            width: 400px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: black 1px 1px;
+            position: relative;
+            left: 500px;
+            top: 30px;
+            
+        }
+        .zoom-image3{
+             width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition:  0.5s ease;
+        }
+        .images-wrapper2:hover .zoom-image3{
+            transform: scale(2);
+        }
+        .image-text{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background: rgba(0,0,0,0.6);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        .image-text p{
+            margin: 0;
+            font-size: 20px;
+        }
+        .image-container:hover .image-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .animated-box{
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 10px;
+
+            animation: MoveChange 2s ease-in-out infinite alternate;
+
+        }
+        @keyframes MoveChange{
+            0%{
+                transform: translate(0,0) rotate(0deg);
+                width: 100px;
+                height: 100px;
+            }
+            50%{
+                transform: rotate(180deg) translate(-100px);
+                background-color: #3498db;
+            }
+            75%{
+                width: 150px;
+                height: 150px;
+            }
+            100%{
+                transform: translate(-100px) rotate(180deg);
+                background-color: aqua;
+            }
+        }
+        .miku3{
+            position: relative;
+            left: 550px;
+            top: 1000px;
+
+
+        }
+        
+    </style>
+    
+</head>
+<body>
+    <div class="miku3">
+        <p><b>联系方式，QQ：3779354264</b></p>
+    </div>
+    <div class="animated-box">
+    <p style="text-align: center;">这是我的个人网站</p>
+    </div>
+    <!-- 新增的包裹容器 -->
+     <div class="images-wrapper2">
+        <img src="https://i.pixiv.nl/img-master/img/2025/09/18/00/00/34/135224547_p0_master1200.jpg" alt="miku" class="zoom-image3">
+    </div>
+    <div class="images-wrapper">
+        <div class="image-container">
+            <img src="https://i.pixiv.nl/img-master/img/2025/10/16/00/00/25/136320484_p0_master1200.jpg" class="zoom-image">
+            <div class="image-text">
+                <p>她真美</p>
+            </div>
+        </div>
+
+        <div class="image-container2">
+            <img src="https://i.pixiv.nl/img-master/img/2025/10/16/10/56/19/136333407_p0_master1200.jpg" class="zoom-image2">
+            
+        </div>
+    </div>
+</body>
+</html>
