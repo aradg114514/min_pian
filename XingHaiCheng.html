@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .parallax{
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 735px;
+            width: 1450px;
+            overflow: hidden;
+            position: relative; /* 关键：让子元素的绝对定位相对于自己 */
+        }
+        .parallax.img1{
+            background-image: url('https://youke1.picui.cn/s1/2025/10/18/68f38ef4d00b8.jpg');
+        }
+        .parallax.img2{
+            background-image: url('https://youke1.picui.cn/s1/2025/10/18/68f393ead21b2.png');
+        }
+        .parallax.img3{
+            background-image: url("https://youke1.picui.cn/s1/2025/10/18/68f394e6753e0.jpg");
+        }
+        .parallax.img4{
+            background-image: url("https://youke1.picui.cn/s1/2025/10/18/68f39707bf8d4.jpg");
+        }
+        .parallax.img5{
+            background-image: url("https://youke1.picui.cn/s1/2025/10/18/68f39dbad46e2.png");
+        }
+        .parallax-text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
+        }
+    </style>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>新海诚动画</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div class="parallax img5">
+        <div class="parallax-text">
+            <h1>言叶之庭</h1>
+            <p>导演: 新海诚</p>
+            <p>《言叶之庭》是一部由新海诚执导的日本动画电影，讲述了高中生秋月孝雄与神秘女子雪野百香里在雨天相遇并逐渐建立起特殊关系的故事。影片以细腻的画面和深刻的情感描绘了两人之间的交流与成长，探讨了孤独、梦想与现实之间的矛盾。电影因其唯美的视觉风格和动人的剧情而广受好评，成为新海诚作品中的经典之一。</p>
+        </div>
+    </div>
+    <div class="parallax img4">
+        <div class="parallax-text">
+            <h2>铃芽之旅</h2>
+            <p>导演: 新海诚</p>
+            <p>故事讲述了17岁的少女岩户铃芽，在追寻神秘“门”之旅中，与变身成椅子的青年宗像草太，并肩跨越日本各地，关闭灾难源头——“门”，寻找自我与温暖的故事。</p>
+        </div>
+    </div>
+    <div class="parallax img3">
+        <div class="parallax-text">
+            <h2>秒速五厘米</h2>
+            <p>导演: 新海诚</p>
+            <p>时间是1990年代至2000年代的日本，远野贵树与篠原明里原本是同班同学的好朋友，自从小学毕业之后，两人因搬家都没有再见一次面。分隔两地的两个人，靠着书信往来保持联络，直到贵树知道即将跟随家人搬到鹿儿岛，距离明里更远的地方，于是两人约定了再见面的时间。计划好的行程，却遇上了暴风雪。之后大家都长大了，各有各的生活，但对彼此的思念，一直留在心中。</p>
+        </div>
+    </div>
+    <div class="parallax img2">
+        <div class="parallax-text">
+            <h2>天气之子</h2>
+            <p>导演: 新海诚</p>
+            <p>《天气之子》是一部2019年上映的日本动画电影，由新海诚执导并编剧，讲述了离家出走来到东京的高中生森嶋帆高，邂逅拥有“只要祈祷就能让天空放晴”能力的少女天野阳菜，两人在命运波折中勇敢选择自我人生方向的故事。本片以奇幻与青春为题材，配乐由RADWIMPS操刀，国内票房达142.3亿日元，荣获众多奖项，也是近年来极受欢迎的动画电影之一。</p>
+        </div>
+    </div>
+    <!-- 调整结构：文字容器放在图片容器内部 -->
+    <div class="parallax img1">
+        <div class="parallax-text">
+            <h2>你的名字</h2>
+            <p>导演: 新海诚</p>
+            <p>《你的名字。》是2016年上映的日本动画电影，由新海诚编剧并执导，由立花泷和宫水三叶主演，两人通过不可思议的“灵魂互换”奇异现象相遇在命运转折点，并围绕即将降临的灾难展开了一段跨越时空的牵绊故事。影片在全球范围引发巨大反响，创下高票房纪录，更以精致画面和动人的情感引发广泛共鸣，成为近年来最具影响力的日本动画作品之一。</p>
+        </div>
+    </div>
+</body>
+</html>
