@@ -12,8 +12,8 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 735px;
-            width: 1450px;
+            height: 750px;
+            width: 100%;
             overflow: hidden;
             position: relative; /* 关键：让子元素的绝对定位相对于自己 */
         }
@@ -38,8 +38,18 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+            border-radius: 15px;
             color: white;
             padding: 20px;
+        }
+        .amiya{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -500%);
+            z-index: 10;
+
         }
     </style>
     <meta charset='utf-8'>
@@ -48,6 +58,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 </head>
 <body>
+    
+        
     <div class="parallax img5">
         <div class="parallax-text">
             <h1>言叶之庭</h1>
@@ -83,6 +95,9 @@
             <p>导演: 新海诚</p>
             <p>《你的名字。》是2016年上映的日本动画电影，由新海诚编剧并执导，由立花泷和宫水三叶主演，两人通过不可思议的“灵魂互换”奇异现象相遇在命运转折点，并围绕即将降临的灾难展开了一段跨越时空的牵绊故事。影片在全球范围引发巨大反响，创下高票房纪录，更以精致画面和动人的情感引发广泛共鸣，成为近年来最具影响力的日本动画作品之一。</p>
         </div>
+    </div>
+</body>
+</html>
     </div>
 </body>
 </html>
