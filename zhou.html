@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周</title>
+    <style>
+        /* 新增：给整个网页(body)设置粉紫渐变背景，覆盖全屏 */
+        body {
+            margin: 0; 
+            padding: 0; 
+            background: linear-gradient(to bottom, #ffd1e3, #9370db);
+            min-height: 100vh; 
+            overflow: hidden;
+        }
+        
+        /* 轮播容器：限定宽高，隐藏溢出内容 */
+        .carousel {
+            width: 500px;      /* 轮播图宽度 */
+            height: 300px;     /* 轮播图高度 */
+            margin: 50px auto; /* 居中显示 */
+            overflow: hidden;  /* 只显示当前轮播项，隐藏其他 */
+            position: relative;/* 作为轮播项绝对定位的参考 */
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            /* 可选：轮播容器背景改为半透明（突出网页整体渐变），也可保留原渐变 */
+            background: rgba(255, 255, 255, 0.2); 
+            backdrop-filter: blur(5px); /* 可选：毛玻璃效果，更美观 */
+        }
+
+        /* 轮播列表：核心滚动容器 */
+        .carousel-list {
+            width: calc(500px * 3); /* 宽度 = 单张图宽度 × 图片数量 */
+            height: 100%;
+            display: flex;          /* 让轮播项横向排列 */
+            list-style: none;       /* 去掉默认列表样式 */
+            padding: 0;             /* 清除默认内边距 */
+            margin: 0;              /* 清除默认外边距 */
+            /* 核心动画：轮播滚动（时长=图片数×单张停留时间） */
+            animation: carousel 9s infinite linear; /* 9秒完成一轮，无限循环，匀速 */
+        }
+
+        /* 轮播项：单张图片容器 */
+        .carousel-item {
+            width: 500px; /* 与轮播容器宽度一致 */
+            height: 100%;
+            flex-shrink: 0; /* 禁止图片项收缩，保证宽度固定 */
+        }
+
+        /* 轮播图片：适配容器 */
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 保持图片比例，覆盖容器（避免变形） */
+        }
+
+        /* 轮播动画关键帧：控制横向位移 */
+        @keyframes carousel {
+            /* 0%-33%：显示第一张图（停留3秒） */
+            0%, 33% {
+                transform: translateX(0);
+            }
+            /* 33%-66%：显示第二张图（停留3秒） */
+            33.1%, 66% {
+                transform: translateX(-500px); /* 左移1个容器宽度 */
+            }
+            /* 66%-100%：显示第三张图（停留3秒） */
+            66.1%, 100% {
+                transform: translateX(-1000px); /* 左移2个容器宽度 */
+            }
+        }
+
+        /* 可选：鼠标悬浮暂停轮播（提升体验） */
+        .carousel:hover .carousel-list {
+            animation-play-state: paused;
+        }
+        
+        .jieshao {
+            position: absolute;
+            font-size: 13px;
+            background-color: rgba(0,0,0,0.5);
+            border-radius: 13px;
+            text-align: center;
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+            padding: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+        <h1 style="text-align: center; color: white; font-family: 'Arial', sans-serif; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">周</h1>
+    </div>
+    <!-- 轮播容器 -->
+    <div class="carousel">
+        <!-- 轮播列表 -->
+        <ul class="carousel-list">
+            <!-- 轮播项1 -->
+            <li class="carousel-item">
+                <img src="https://picui.ogmua.cn/s1/2026/03/13/69b3f4c84a166.webp" alt="图片1">
+            </li>
+            <!-- 轮播项2 -->
+            <li class="carousel-item">
+                <img src="https://picui.ogmua.cn/s1/2026/03/14/69b5193ca807c.webp" alt="图片2">
+            </li>
+            <!-- 轮播项3 -->
+            <li class="carousel-item">
+                <img src="https://picui.ogmua.cn/s1/2026/03/13/69b3f5c619147.webp" alt="图片3">
+            </li>
+        </ul>
+    </div>
+    <div class="jieshao">爆爆蛋：原名周靖浩，外号爆爆蛋，传销哥，
+        <br>差生，埃德加等</br>
+        <br>全州人，现居住于广西省桂林市全州县新区</br>
+        <br>身份证号：4503242012xxxxxxxx</br>
+        <br>qq号：1778285547</br></div>
+    <div>
+</body>
+</html>
